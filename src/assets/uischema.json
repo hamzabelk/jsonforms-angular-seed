@@ -1,0 +1,110 @@
+{
+  "type": "VerticalLayout",
+  "elements": [
+    {
+      "type": "Group",
+      "label": "Informations générales",
+      "elements": [
+        {
+          "type": "HorizontalLayout",
+          "elements": [
+            {
+              "label": "Prénom",
+              "type": "Control",
+              "scope": "#/properties/infos/properties/firstname"
+            },
+            {
+              "label": "Nom",
+              "type": "Control",
+              "scope": "#/properties/infos/properties/lastname"
+            }
+          ]
+        },
+        {
+          "type": "HorizontalLayout",
+          "elements": [
+            {
+              "label": "Date de naissance",
+              "type": "Control",
+              "scope": "#/properties/infos/properties/birthDate"
+            },
+            {
+              "label": "Nationalité",
+              "type": "Control",
+              "scope": "#/properties/infos/properties/nationality"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "VerticalLayout",
+      "label": "Définition des parcs",
+      "scope": "#/properties/parcs",
+      "elements": [
+        {
+          "type": "Group",
+          "label": "Parc 1",
+          "elements": [
+            {
+              "type": "HorizontalLayout",
+              "elements": [
+                {
+                  "label": "Nom du parc",
+                  "type": "Control",
+                  "scope": "#/properties/parcs/properties/name"
+                },
+                {
+                  "label": "Catégorie",
+                  "type": "Control",
+                  "scope": "#/properties/parcs/properties/type"
+                }
+              ]
+            },
+            {
+              "type": "HorizontalLayout",
+              "elements": [
+                {
+                  "label": "Pays",
+                  "type": "Control",
+                  "scope": "#/properties/parcs/properties/country"
+                },
+                {
+                  "label": "Ville",
+                  "type": "Control",
+                  "scope": "#/properties/parcs/properties/city",
+                  "rule": {
+                    "effect": "HIDE",
+                    "condition": {
+                      "scope": "#/properties/parcs/properties/space"
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "type": "HorizontalLayout",
+              "elements": [
+                {
+                  "label": "Superficie",
+                  "type": "Control",
+                  "scope": "#/properties/parcs/properties/space"
+                },
+                {
+                  "label": "Emissions GES",
+                  "type": "Control",
+                  "scope": "#/properties/parcs/properties/emission"
+                }
+              ]
+            },
+            {
+              "label": "Méthode de calcul des émissions GES",
+              "type": "Control",
+              "scope": "#/properties/parcs/properties/method"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

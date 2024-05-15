@@ -1,0 +1,86 @@
+{
+  "type": "object",
+  "properties": {
+    "infos": {
+      "type":"object",
+      "title": "Informations générales",
+      "properties": {
+        "firstname": {
+          "type": "string",
+          "minLength": 3,
+          "description": "Please enter your firstname"
+        },
+        "lastname": {
+          "type": "string",
+          "minLength": 3,
+          "description": "Please enter your lastname"
+        },
+        "birthDate": {
+          "type": "string",
+          "format": "date"
+        },
+        "nationality": {
+          "type": "string",
+          "enum": [
+            "FR",
+            "ES",
+            "BE",
+            "IT",
+            "PO",
+            "Other"
+          ]
+        }
+      },
+      "required": [
+        "firstname",
+        "lastname",
+        "birthDate",
+        "nationality"
+      ]
+    },
+    "parcs": {
+      "type": "array",
+      "items": {
+        "type":"object",
+        "title": "Parc",
+        "properties": {
+          "name": {
+            "type": "string",
+            "minLength": 3,
+            "description": "Renseigner le nom du parc"
+          },
+          "type": {
+            "type": "string",
+            "minLength": 3,
+            "description": "Renseigner la catégorie du batilment"
+          },
+          "country": {
+            "type": "string",
+            "enum": [null, "France", "Espagne", "Portugal", "Italie", "Belgique" ],
+            "description": "Renseigner le pays"
+          },
+          "city": {
+            "type": "string",
+            "enum": ["Paris", "Marseille", "Lyon" ],
+            "description": "Renseigner la ville"
+          },
+          "space": {
+            "type": "string",
+            "minLength": 2,
+            "description": "Renseigner la superficie en m"
+          },
+          "emission": {
+            "type": "string",
+            "minLength": 2,
+            "description": "Renseigner les émissions de GES"
+          },
+          "method": {
+            "type": "string",
+            "minLength": 2,
+            "description": "Renseigner la méthode de calcul des émissions GES"
+          }
+        }
+      }
+    }
+  }
+}
